@@ -1,14 +1,13 @@
-import { Play, ArrowRight } from "lucide-react";
-import schoolImage from "../../assets/images/hero_image.jpg";
+import { ArrowRight } from "lucide-react";
+import schoolImage from "../../assets/images/hero_image.jpeg";
 
 const HeroComp = () => {
   return (
     <section className="relative w-full min-h-screen overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Replace 'your-image-url.jpg' with your actual image path */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center sm:bg-[center_30%]"
           style={{
             backgroundImage: `url(${schoolImage})`,
           }}
@@ -19,18 +18,6 @@ const HeroComp = () => {
 
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 h-screen flex flex-col justify-center">
         <div className="max-w-3xl">
-          {/* Language Flags with Animation */}
-          {/* <div className="flex gap-4 mb-8">
-            <div className="w-12 h-12 rounded-lg bg-brand-cream/10 backdrop-blur-sm flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200 cursor-pointer border border-white/20">
-              🇬🇧
-            </div>
-            <div className="w-12 h-12 rounded-lg bg-brand-cream/10 backdrop-blur-sm flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200 cursor-pointer border border-white/20">
-              🇩🇪
-            </div>
-            <div className="w-12 h-12 rounded-lg bg-brand-cream/10 backdrop-blur-sm flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200 cursor-pointer border border-white/20">
-              🇫🇷
-            </div>
-          </div> */}
 
           {/* Main Heading with Staggered Animation */}
           <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
@@ -60,17 +47,17 @@ const HeroComp = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="group px-8 py-4 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
+            <button className="group px-8 py-4 cursor-pointer bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
               Apply Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 bg-brand-cream/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-black transition-all duration-200 shadow-lg">
+            <button className="px-8 py-4 cursor-pointer bg-brand-cream/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-black transition-all duration-200 shadow-lg">
               Contact Us
             </button>
-            <button className="group px-8 py-4 border-2 border-brand-cream text-brand-cream font-semibold rounded-lg hover:bg-brand-cream hover:text-brand-black transition-all duration-200 flex items-center gap-2">
+            {/* <button className="group px-8 py-4 border-2 border-brand-cream text-brand-cream font-semibold rounded-lg hover:bg-brand-cream hover:text-brand-black transition-all duration-200 flex items-center gap-2">
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch Video
-            </button>
+            </button> */}
           </div>
 
           {/* Stats or Features */}

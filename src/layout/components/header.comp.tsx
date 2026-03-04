@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
+import Logo from "../../assets/images/logo.png";
 
 const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Primary", href: "#primary" },
-    { label: "Secondary", href: "#secondary" },
-    { label: "Syllabus", href: "#syllabus" },
-    { label: "Our Method", href: "#method" },
+    { label: "Home", href: "#" },
     { label: "About Us", href: "#about" },
+    { label: "Our purpose", href: "#purpose" },
+    { label: "Academics", href: "#academics" },
+
   ];
 
   return (
@@ -19,10 +20,9 @@ const HeaderComp = () => {
           {/* Logo/Brand - Enhanced */}
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-brand-brown rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-md transform hover:scale-105 transition-transform duration-200">
-                CJ
+              <div className="">
+                <img src={Logo} alt="Logo" className="w-12 h-12 object-contain" />
               </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-brand-red rounded-full animate-pulse"></div>
             </div>
             <div>
               <h1 className="text-xl font-bold text-brand-black tracking-tight">
@@ -50,13 +50,13 @@ const HeaderComp = () => {
 
           {/* Right Side Actions - Enhanced */}
           <div className="hidden lg:flex items-center gap-3">
-            <button className="px-5 py-2.5 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 flex items-center gap-2 group">
+            {/* <button className="px-5 py-2.5 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 flex items-center gap-2 group">
               For students
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-6 py-2.5 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg">
+            </button> */}
+            <a href="#contact" className="px-6 py-2.5 bg-brand-red cursor-pointer text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg inline-block text-center">
               Enquire Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button - Enhanced */}
@@ -86,12 +86,12 @@ const HeaderComp = () => {
               ))}
             </div>
             <div className="flex flex-col gap-3 mt-6 px-4">
-              <button className="px-5 py-3 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 border border-brand-grey/20">
+              {/* <button className="px-5 py-3 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 border border-brand-grey/20">
                 For students
-              </button>
-              <button className="px-6 py-3 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transition-all duration-200 shadow-md">
+              </button> */}
+              <a href="#contact" onClick={() => setIsOpen(false)} className="px-6 py-3 bg-brand-red text-white text-center font-semibold rounded-lg hover:bg-brand-red transition-all duration-200 shadow-md inline-block">
                 Enquire Now
-              </button>
+              </a>
             </div>
           </nav>
         )}

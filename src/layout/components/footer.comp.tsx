@@ -7,6 +7,7 @@ import {
   Instagram,
   ExternalLink,
 } from "lucide-react";
+import Logo from "../../assets/images/logo.png";
 
 const FooterComp = () => {
   const currentYear = new Date().getFullYear();
@@ -19,13 +20,12 @@ const FooterComp = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="relative">
-                <div className="w-12 h-12 bg-brand-brown rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                  CJ
+                <div className="">
+                  <img src={Logo} alt="Logo" className="w-12 h-12 object-contain" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-brand-red rounded-full"></div>
               </div>
               <div>
-                <h3 className="font-bold text-white text-lg">C'est Joli</h3>
+                <p className="font-bold text-white text-lg">C'est Joli</p>
                 <p className="text-xs text-brand-grey/80">Wellspring Academy</p>
               </div>
             </div>

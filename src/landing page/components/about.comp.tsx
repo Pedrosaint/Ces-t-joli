@@ -1,4 +1,7 @@
 import { Award, Users, Globe, ArrowRight } from "lucide-react";
+import Learning from "../../assets/images/learning.jpeg";
+import School from "../../assets/images/school_env.png";
+import Activities from "../../assets/images/activity.jpeg"
 
 const AboutComp = () => {
   const features = [
@@ -90,7 +93,7 @@ const AboutComp = () => {
             {/* Large Image */}
             <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/about1.jpg"
+                src={Learning}
                 alt="Students learning at C'est Joli Wellspring Academy"
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
@@ -99,8 +102,8 @@ const AboutComp = () => {
             {/* Small Image 1 */}
             <div className="rounded-2xl overflow-hidden shadow-md">
               <img
-                src="/images/about2.jpg"
-                alt="Classroom environment"
+                src={School}
+                alt="School environment"
                 className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -108,7 +111,7 @@ const AboutComp = () => {
             {/* Small Image 2 */}
             <div className="rounded-2xl overflow-hidden shadow-md">
               <img
-                src="/images/about3.jpg"
+                src={Activities}
                 alt="School activity"
                 className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
               />

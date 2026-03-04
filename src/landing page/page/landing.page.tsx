@@ -1,7 +1,7 @@
 import HeaderComp from "../../layout/components/header.comp";
 import FooterComp from "../../layout/components/footer.comp";
 import HeroComp from "../components/hero.comp";
-import AboutComp from "../components/about.comp";
+import AboutDetailedComp from "../components/about_detailed.comp";
 import VisionComp from "../components/vision.comp";
 import AcademicSessionComp from "../components/academic_section.comp";
 import AdmissionSectionComp from "../components/admission_section.comp";
@@ -18,7 +18,7 @@ const LandingPage = () => {
       <HeroComp />
 
       {/* About Section */}
-      <AboutComp />
+      <AboutDetailedComp />
 
       {/* Vision & Mission */}
       <VisionComp />
