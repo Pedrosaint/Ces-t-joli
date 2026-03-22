@@ -47,13 +47,13 @@ const HeroComp = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="group px-8 py-4 cursor-pointer bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
-              Apply Now
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="group px-8 py-4 cursor-pointer bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
+              Enquire Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 cursor-pointer bg-brand-cream/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-black transition-all duration-200 shadow-lg">
+            </a>
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20a%20question%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-8 py-4 cursor-pointer bg-brand-cream/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-black transition-all duration-200 shadow-lg">
               Contact Us
-            </button>
+            </a>
             {/* <button className="group px-8 py-4 border-2 border-brand-cream text-brand-cream font-semibold rounded-lg hover:bg-brand-cream hover:text-brand-black transition-all duration-200 flex items-center gap-2">
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch Video

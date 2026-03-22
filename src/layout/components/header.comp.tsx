@@ -10,7 +10,7 @@ const HeaderComp = () => {
     { label: "About Us", href: "#about" },
     { label: "Our purpose", href: "#purpose" },
     { label: "Academics", href: "#academics" },
-
+    { label: "Careers", href: "#careers" },
   ];
 
   return (
@@ -54,7 +54,7 @@ const HeaderComp = () => {
               For students
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button> */}
-            <a href="#contact" className="px-6 py-2.5 bg-brand-red cursor-pointer text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg inline-block text-center">
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 bg-brand-red cursor-pointer text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg inline-block text-center">
               Enquire Now
             </a>
           </div>
@@ -89,7 +89,7 @@ const HeaderComp = () => {
               {/* <button className="px-5 py-3 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 border border-brand-grey/20">
                 For students
               </button> */}
-              <a href="#contact" onClick={() => setIsOpen(false)} className="px-6 py-3 bg-brand-red text-white text-center font-semibold rounded-lg hover:bg-brand-red transition-all duration-200 shadow-md inline-block">
+              <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="px-6 py-3 bg-brand-red text-white text-center font-semibold rounded-lg hover:bg-brand-red transition-all duration-200 shadow-md inline-block">
                 Enquire Now
               </a>
             </div>

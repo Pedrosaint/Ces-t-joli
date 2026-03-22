@@ -31,8 +31,8 @@ const AdmissionSectionComp = () => {
 
   const steps = [
     {
-      title: "Submit Application",
-      desc: "Fill out the online or physical application form",
+      title: "Contact Us",
+      desc: "Reach out to us via WhatsApp to begin the process",
       color: "border-red-500",
     },
     {
@@ -130,10 +130,10 @@ const AdmissionSectionComp = () => {
               ))}
             </div>
 
-            <button className="group w-full px-8 py-4 bg-brand-red text-white font-semibold rounded-xl hover:bg-brand-red transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-              Apply Now
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="group w-full px-8 py-4 bg-brand-red text-white font-semibold rounded-xl hover:bg-brand-red transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+              Enquire on WhatsApp
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
 
             <div className="mt-6 p-4 bg-brand-cream rounded-xl border border-brand-brown/20">
               <div className="flex items-start gap-3">

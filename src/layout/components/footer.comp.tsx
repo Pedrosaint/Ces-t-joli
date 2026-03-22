@@ -1,5 +1,4 @@
 import {
-  Mail,
   Phone,
   MapPin,
   Facebook,
@@ -65,17 +64,6 @@ const FooterComp = () => {
                 >
                   <Phone className="w-5 h-5 text-brand-brown shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                   <span>0803 778 3440</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:C'estjoliwellspringacademy@gmail.com"
-                  className="hover:text-white transition-colors flex items-start gap-3 group"
-                >
-                  <Mail className="w-5 h-5 text-brand-brown shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                  <span className="wrap-break-words">
-                    C'estjoliwellspringacademy@gmail.com
-                  </span>
                 </a>
               </li>
               <li className="flex items-start gap-3">

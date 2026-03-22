@@ -6,7 +6,9 @@ import VisionComp from "../components/vision.comp";
 import AcademicSessionComp from "../components/academic_section.comp";
 import AdmissionSectionComp from "../components/admission_section.comp";
 // import TestimonalComp from "../components/testimonal.comp";
-import ContactComp from "../components/contact.comp";
+import CareerExplorerComp from "../components/career_explorer.comp";
+import WhyChooseUsComp from "../components/why_choose_us.comp";
+import WhatsAppButton from "../components/whatsapp_button.comp";
 
 const LandingPage = () => {
   return (
@@ -23,6 +25,9 @@ const LandingPage = () => {
       {/* Vision & Mission */}
       <VisionComp />
 
+      {/* Why Parents Choose Us + Stats + Our Promise */}
+      <WhyChooseUsComp />
+
       {/* Academics Section */}
       <AcademicSessionComp />
 
@@ -32,11 +37,14 @@ const LandingPage = () => {
       {/* Testimonials Section */}
       {/* <TestimonalComp /> */}
 
-      {/* Contact Section */}
-      <ContactComp />
+      {/* Career Path Explorer */}
+      <CareerExplorerComp />
 
       {/* Footer */}
       <FooterComp />
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </div>
   );
 };
