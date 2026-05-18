@@ -2,6 +2,15 @@ import { useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import Logo from "../../assets/images/logo.png";
 
+const brandColors = {
+  primary: "#BA1B1D",
+  secondary: "#704A30",
+  accent: "#FDFBF7",
+  text: "#1A1A1A",
+};
+
+const portalUrl = `${import.meta.env.VITE_PORTAL_URL}?schoolName=${encodeURIComponent("C'est Joli Wellspring Academy")}&schoolLogo=${encodeURIComponent(`${import.meta.env.VITE_APP_URL}/logo.png`)}&brandColors=${encodeURIComponent(JSON.stringify(brandColors))}`;
+
 const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,10 +59,15 @@ const HeaderComp = () => {
 
           {/* Right Side Actions - Enhanced */}
           <div className="hidden lg:flex items-center gap-3">
-            {/* <button className="px-5 py-2.5 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 flex items-center gap-2 group">
-              For students
+            <a
+              href={portalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 text-brand-brown font-semibold rounded-lg border border-brand-brown hover:bg-brand-cream transition-all duration-200 flex items-center gap-2 group"
+            >
+              Sign In
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button> */}
+            </a>
             <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 bg-brand-red cursor-pointer text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg inline-block text-center">
               Enquire Now
             </a>
@@ -86,9 +100,15 @@ const HeaderComp = () => {
               ))}
             </div>
             <div className="flex flex-col gap-3 mt-6 px-4">
-              {/* <button className="px-5 py-3 text-brand-grey font-semibold rounded-lg hover:bg-brand-cream transition-all duration-200 border border-brand-grey/20">
-                For students
-              </button> */}
+              <a
+                href={portalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="px-5 py-3 text-brand-brown text-center font-semibold rounded-lg border border-brand-brown hover:bg-brand-cream transition-all duration-200"
+              >
+                Sign In
+              </a>
               <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="px-6 py-3 bg-brand-red text-white text-center font-semibold rounded-lg hover:bg-brand-red transition-all duration-200 shadow-md inline-block">
                 Enquire Now
               </a>

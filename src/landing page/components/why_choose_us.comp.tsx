@@ -221,7 +221,7 @@ const WhyChooseUsComp = () => {
                     key={i}
                     className="flex gap-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-brown/10 flex items-center justify-center text-brand-brown font-bold text-lg">
+                    <div className="shrink-0 w-10 h-10 rounded-full bg-brand-brown/10 flex items-center justify-center text-brand-brown font-bold text-lg">
                       {i + 1}
                     </div>
                     <div>

@@ -35,7 +35,7 @@ const AboutDetailedComp = () => {
                         <img
                             src={Secondary}
                             alt="Secondary Students"
-                            className="relative rounded-3xl w-full h-[400px] object-cover shadow-xl border-4 border-white"
+                            className="relative rounded-3xl w-full h-100 object-cover shadow-xl border-4 border-white"
                         />
                     </div>
                     <div className="order-1 lg:order-2">
@@ -106,7 +106,7 @@ const AboutDetailedComp = () => {
                         <img
                             src={Learning}
                             alt="Primary Students"
-                            className="relative rounded-3xl w-full h-[400px] object-cover shadow-xl border-4 border-white"
+                            className="relative rounded-3xl w-full h-100 object-cover shadow-xl border-4 border-white"
                         />
                     </div>
                 </div>
@@ -118,7 +118,7 @@ const AboutDetailedComp = () => {
                         <img
                             src={Culture}
                             alt="School Activities"
-                            className="relative rounded-3xl w-full h-[400px] object-cover shadow-xl border-4 border-white"
+                            className="relative rounded-3xl w-full h-100 object-cover shadow-xl border-4 border-white"
                         />
                     </div>
                     <div className="order-1 lg:order-2">
