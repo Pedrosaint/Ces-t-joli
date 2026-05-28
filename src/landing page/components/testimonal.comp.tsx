@@ -9,7 +9,7 @@ const TestimonalComp = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-white p-6 shadow-lg">
             <div className="flex gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="text-brand-red">
@@ -28,7 +28,7 @@ const TestimonalComp = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-white p-6 shadow-lg">
             <div className="flex gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="text-brand-red">
@@ -49,7 +49,7 @@ const TestimonalComp = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-white p-6 shadow-lg">
             <div className="flex gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
                 <span key={i} className="text-brand-red">

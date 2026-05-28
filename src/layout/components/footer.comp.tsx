@@ -83,21 +83,21 @@ const FooterComp = () => {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="w-11 h-11 bg-brand-black rounded-lg flex items-center justify-center text-brand-blue hover:bg-brand-brown hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
+                className="w-11 h-11 bg-brand-black flex items-center justify-center text-brand-blue hover:bg-brand-brown hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-11 h-11 bg-brand-black rounded-lg flex items-center justify-center text-sky-400 hover:bg-sky-500 hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
+                className="w-11 h-11 bg-brand-black flex items-center justify-center text-sky-400 hover:bg-sky-500 hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-11 h-11 bg-brand-black rounded-lg flex items-center justify-center text-pink-400 hover:bg-pink-500 hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
+                className="w-11 h-11 bg-brand-black flex items-center justify-center text-pink-400 hover:bg-pink-500 hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />

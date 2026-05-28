@@ -49,7 +49,7 @@ const HeaderComp = () => {
               <a
                 key={index}
                 href={item.href}
-                className="relative px-4 py-2 text-brand-grey font-medium rounded-lg hover:text-brand-brown hover:bg-brand-cream transition-all duration-200 group"
+                className="relative px-4 py-2 text-brand-grey font-medium hover:text-brand-brown hover:bg-brand-cream transition-all duration-200 group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-brown transform -translate-x-1/2 group-hover:w-3/4 transition-all duration-300"></span>
@@ -63,19 +63,19 @@ const HeaderComp = () => {
               href={portalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 text-brand-brown font-semibold rounded-lg border border-brand-brown hover:bg-brand-cream transition-all duration-200 flex items-center gap-2 group"
+              className="px-5 py-2.5 text-brand-brown font-semibold border border-brand-brown hover:bg-brand-cream transition-all duration-200 flex items-center gap-2 group"
             >
               Sign In
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 bg-brand-red cursor-pointer text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg inline-block text-center">
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 bg-brand-red cursor-pointer text-white font-semibold hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg inline-block text-center">
               Enquire Now
             </a>
           </div>
 
           {/* Mobile Menu Button - Enhanced */}
           <button
-            className="lg:hidden p-2 text-brand-grey hover:bg-brand-cream rounded-lg transition-colors"
+            className="lg:hidden p-2 text-brand-grey hover:bg-brand-cream transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -91,7 +91,7 @@ const HeaderComp = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="flex items-center justify-between px-4 py-3 text-brand-grey font-medium rounded-lg hover:bg-brand-cream hover:text-brand-brown transition-all duration-200 group"
+                  className="flex items-center justify-between px-4 py-3 text-brand-grey font-medium hover:bg-brand-cream hover:text-brand-brown transition-all duration-200 group"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -105,11 +105,11 @@ const HeaderComp = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="px-5 py-3 text-brand-brown text-center font-semibold rounded-lg border border-brand-brown hover:bg-brand-cream transition-all duration-200"
+                className="px-5 py-3 text-brand-brown text-center font-semibold border border-brand-brown hover:bg-brand-cream transition-all duration-200"
               >
                 Sign In
               </a>
-              <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="px-6 py-3 bg-brand-red text-white text-center font-semibold rounded-lg hover:bg-brand-red transition-all duration-200 shadow-md inline-block">
+              <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20an%20enquiry%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="px-6 py-3 bg-brand-red text-white text-center font-semibold hover:bg-brand-red transition-all duration-200 shadow-md inline-block">
                 Enquire Now
               </a>
             </div>

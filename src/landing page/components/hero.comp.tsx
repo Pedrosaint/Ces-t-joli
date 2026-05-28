@@ -7,7 +7,7 @@ const HeroComp = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center sm:bg-[center_30%]"
+          className="absolute inset-0 bg-cover bg-center sm:bg-position-[center_30%]"
           style={{
             backgroundImage: `url(${schoolImage})`,
           }}
@@ -30,9 +30,9 @@ const HeroComp = () => {
 
           {/* Decorative Underline */}
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-20 h-1 bg-brand-red rounded-full" />
-            <div className="w-12 h-1 bg-brand-red/50 rounded-full" />
-            <div className="w-6 h-1 bg-brand-red/30 rounded-full" />
+            <div className="w-20 h-1 bg-brand-red" />
+            <div className="w-12 h-1 bg-brand-red/50" />
+            <div className="w-6 h-1 bg-brand-red/30" />
           </div>
 
           {/* Subheading */}
@@ -47,14 +47,14 @@ const HeroComp = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <a href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="group px-8 py-4 cursor-pointer bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="group px-8 py-4 cursor-pointer bg-brand-red text-white font-semibold hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
               Enquire Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20a%20question%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-8 py-4 cursor-pointer bg-brand-cream/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-black transition-all duration-200 shadow-lg">
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20have%20a%20question%20about%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="px-8 py-4 cursor-pointer bg-brand-cream/10 backdrop-blur-sm border-2 border-white text-white font-semibold hover:bg-white hover:text-brand-black transition-all duration-200 shadow-lg">
               Contact Us
             </a>
-            {/* <button className="group px-8 py-4 border-2 border-brand-cream text-brand-cream font-semibold rounded-lg hover:bg-brand-cream hover:text-brand-black transition-all duration-200 flex items-center gap-2">
+            {/* <button className="group px-8 py-4 border-2 border-brand-cream text-brand-cream font-semibold hover:bg-brand-cream hover:text-brand-black transition-all duration-200 flex items-center gap-2">
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Watch Video
             </button> */}

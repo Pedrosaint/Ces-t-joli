@@ -57,7 +57,7 @@ const AdmissionSectionComp = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full mb-4 border border-brand-brown/20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream mb-4 border border-brand-brown/20">
             <span className="text-sm font-semibold text-brand-brown">
               Join Us
             </span>
@@ -71,7 +71,7 @@ const AdmissionSectionComp = () => {
           {/* Requirements */}
           <div>
             <h3 className="text-2xl font-bold text-brand-black mb-8 flex items-center gap-3">
-              <div className="w-1 h-8 bg-brand-red rounded-full"></div>
+              <div className="w-1 h-8 bg-brand-red"></div>
               Admission Requirements
             </h3>
 
@@ -79,7 +79,7 @@ const AdmissionSectionComp = () => {
               {requirements.map((req, index) => (
                 <div key={index} className="flex gap-4 group">
                   <div className="shrink-0">
-                    <div className="w-12 h-12 rounded-xl bg-brand-red text-white flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-brand-red text-white flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                       {req.num}
                     </div>
                   </div>
@@ -97,7 +97,7 @@ const AdmissionSectionComp = () => {
           {/* Process */}
           <div>
             <h3 className="text-2xl font-bold text-brand-black mb-8 flex items-center gap-3">
-              <div className="w-1 h-8 bg-brand-brown rounded-full"></div>
+              <div className="w-1 h-8 bg-brand-brown"></div>
               Application Process
             </h3>
 
@@ -105,10 +105,10 @@ const AdmissionSectionComp = () => {
               {steps.map((step, index) => (
                 <div key={index} className="relative">
                   <div
-                    className={`bg-brand-cream rounded-2xl p-6 border-l-4 ${step.color} hover:shadow-md transition-shadow`}
+                    className={`bg-brand-cream p-6 border-l-4 ${step.color} hover:shadow-md transition-shadow`}
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-white border-2 border-brand-grey/20 flex items-center justify-center shrink-0 font-bold text-brand-black">
+                      <div className="w-8 h-8 bg-white border-2 border-brand-grey/20 flex items-center justify-center shrink-0 font-bold text-brand-black">
                         {index + 1}
                       </div>
                       <div className="flex-1">
@@ -123,19 +123,19 @@ const AdmissionSectionComp = () => {
                   {/* Connector */}
                   {index < steps.length - 1 && (
                     <div className="flex justify-center py-2">
-                      <div className="w-0.5 h-4 bg-gray-300 rounded-full"></div>
+                      <div className="w-0.5 h-4 bg-gray-300"></div>
                     </div>
                   )}
                 </div>
               ))}
             </div>
 
-            <a href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="group w-full px-8 py-4 bg-brand-red text-white font-semibold rounded-xl hover:bg-brand-red transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+            <a href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20C'est%20Joli%20Wellspring%20Academy." target="_blank" rel="noopener noreferrer" className="group w-full px-8 py-4 bg-brand-red text-white font-semibold hover:bg-brand-red transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
               Enquire on WhatsApp
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <div className="mt-6 p-4 bg-brand-cream rounded-xl border border-brand-brown/20">
+            <div className="mt-6 p-4 bg-brand-cream border border-brand-brown/20">
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-brand-brown shrink-0 mt-0.5" />
                 <p className="text-sm text-brand-grey">

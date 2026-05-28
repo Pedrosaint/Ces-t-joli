@@ -89,7 +89,7 @@ const WhyChooseUsComp = () => {
         <div className="container mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full mb-4 border border-brand-brown/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white mb-4 border border-brand-brown/20">
               <span className="text-sm font-semibold text-brand-brown">
                 Why Parents Trust Us
               </span>
@@ -104,9 +104,9 @@ const WhyChooseUsComp = () => {
               excellent, morally grounded, and ready to lead.
             </p>
             <div className="flex items-center justify-center gap-3 mt-6">
-              <div className="w-16 h-1.5 bg-brand-brown rounded-full" />
-              <div className="w-8 h-1.5 bg-brand-brown/60 rounded-full" />
-              <div className="w-4 h-1.5 bg-brand-brown/30 rounded-full" />
+              <div className="w-16 h-1.5 bg-brand-brown" />
+              <div className="w-8 h-1.5 bg-brand-brown/60" />
+              <div className="w-4 h-1.5 bg-brand-brown/30" />
             </div>
           </div>
 
@@ -115,10 +115,10 @@ const WhyChooseUsComp = () => {
             {pillars.map((pillar, i) => (
               <div
                 key={i}
-                className={`group relative bg-white rounded-2xl p-7 border-t-4 ${pillar.accent} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+                className={`group relative bg-white p-7 border-t-4 ${pillar.accent} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
               >
                 {/* Icon */}
-                <div className="w-14 h-14 bg-brand-cream rounded-xl flex items-center justify-center text-brand-brown mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-brand-cream flex items-center justify-center text-brand-brown mb-5 group-hover:scale-110 transition-transform duration-300">
                   {pillar.icon}
                 </div>
 
@@ -155,15 +155,15 @@ const WhyChooseUsComp = () => {
       {/* ── Section 3: Our Promise to Parents ── */}
       <section className="px-4 md:px-6 lg:px-8 py-20 bg-white">
         <div className="container mx-auto">
-          <div className="relative bg-brand-cream rounded-3xl overflow-hidden">
+          <div className="relative bg-brand-cream overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-brown/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-red/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-brown/5 -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-red/5 translate-y-1/2 -translate-x-1/2" />
 
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-12 lg:p-16 items-center">
               {/* Left — Message */}
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full mb-6 border border-brand-brown/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white mb-6 border border-brand-brown/20">
                   <Award className="w-4 h-4 text-brand-red" />
                   <span className="text-sm font-semibold text-brand-brown">
                     Our Promise
@@ -190,7 +190,7 @@ const WhyChooseUsComp = () => {
                   href="https://wa.me/2348037783440?text=Hello!%20I%20would%20like%20to%20enroll%20my%20child%20at%20C'est%20Joli%20Wellspring%20Academy."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 btn-primary text-base px-8 py-3.5 rounded-xl font-semibold group"
+                  className="inline-flex items-center gap-2 btn-primary text-base px-8 py-3.5 font-semibold group"
                 >
                   Enroll Your Child Today
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -219,9 +219,9 @@ const WhyChooseUsComp = () => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex gap-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className="flex gap-4 bg-white p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
                   >
-                    <div className="shrink-0 w-10 h-10 rounded-full bg-brand-brown/10 flex items-center justify-center text-brand-brown font-bold text-lg">
+                    <div className="shrink-0 w-10 h-10 bg-brand-brown/10 flex items-center justify-center text-brand-brown font-bold text-lg">
                       {i + 1}
                     </div>
                     <div>

@@ -10,7 +10,7 @@ const AboutDetailedComp = () => {
 
                 {/* Intro Section */}
                 <div className="max-w-4xl mx-auto text-center mb-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full mb-6 border border-brand-brown/20 shadow-sm">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white mb-6 border border-brand-brown/20 shadow-sm">
                         <span className="text-sm font-semibold text-brand-brown uppercase tracking-wider">
                             About Us
                         </span>
@@ -19,9 +19,9 @@ const AboutDetailedComp = () => {
                         Welcome to C'est Joli Wellspring Academy
                     </h2>
                     <div className="flex items-center justify-center gap-3 mb-8">
-                        <div className="w-16 h-1.5 bg-brand-brown rounded-full" />
-                        <div className="w-8 h-1.5 bg-brand-brown/60 rounded-full" />
-                        <div className="w-4 h-1.5 bg-brand-brown/30 rounded-full" />
+                        <div className="w-16 h-1.5 bg-brand-brown" />
+                        <div className="w-8 h-1.5 bg-brand-brown/60" />
+                        <div className="w-4 h-1.5 bg-brand-brown/30" />
                     </div>
                     <p className="text-xl text-brand-grey leading-relaxed">
                         A nurturing environment where excellence, creativity, and character are developed in every child. We are committed to providing quality education that blends strong academics with moral values, creativity, leadership, and cultural awareness.
@@ -31,16 +31,16 @@ const AboutDetailedComp = () => {
                 {/* Section 1: Secondary School (Image Left, Text Right) */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
                     <div className="order-2 lg:order-1 relative group">
-                        <div className="absolute inset-0 bg-brand-brown rounded-3xl transform translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
+                        <div className="absolute inset-0 bg-brand-brown transform translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
                         <img
                             src={Secondary}
                             alt="Secondary Students"
-                            className="relative rounded-3xl w-full h-100 object-cover shadow-xl border-4 border-white"
+                            className="relative w-full h-100 object-cover shadow-xl border-4 border-white"
                         />
                     </div>
                     <div className="order-1 lg:order-2">
                         <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-brand-brown">
+                            <div className="w-12 h-12 bg-white shadow-md flex items-center justify-center text-brand-brown">
                                 <GraduationCap className="w-6 h-6" />
                             </div>
                             <h3 className="text-3xl font-bold text-brand-black">Our Secondary School</h3>
@@ -62,7 +62,7 @@ const AboutDetailedComp = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-8 p-4 bg-white rounded-xl border-l-4 border-brand-brown shadow-sm">
+                        <div className="mt-8 p-4 bg-white border-l-4 border-brand-brown shadow-sm">
                             <p className="font-medium text-brand-black italic text-sm">
                                 "Our students are trained to think critically, communicate confidently, and lead responsibly in a fast-changing world."
                             </p>
@@ -74,7 +74,7 @@ const AboutDetailedComp = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
                     <div>
                         <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-brand-brown">
+                            <div className="w-12 h-12 bg-white shadow-md flex items-center justify-center text-brand-brown">
                                 <BookOpen className="w-6 h-6" />
                             </div>
                             <h3 className="text-3xl font-bold text-brand-black">Our Primary School</h3>
@@ -95,18 +95,18 @@ const AboutDetailedComp = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-8 p-4 bg-white rounded-xl border-l-4 border-brand-sky shadow-sm">
+                        <div className="mt-8 p-4 bg-white border-l-4 border-brand-sky shadow-sm">
                             <p className="font-medium text-brand-black italic text-sm">
                                 "Through structured classroom activities and fun-based learning, we help every child discover their strengths and talents."
                             </p>
                         </div>
                     </div>
                     <div className="relative group">
-                        <div className="absolute inset-0 bg-brand-sky rounded-3xl transform -translate-x-4 translate-y-4 group-hover:-translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
+                        <div className="absolute inset-0 bg-brand-sky transform -translate-x-4 translate-y-4 group-hover:-translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
                         <img
                             src={Learning}
                             alt="Primary Students"
-                            className="relative rounded-3xl w-full h-100 object-cover shadow-xl border-4 border-white"
+                            className="relative w-full h-100 object-cover shadow-xl border-4 border-white"
                         />
                     </div>
                 </div>
@@ -114,16 +114,16 @@ const AboutDetailedComp = () => {
                 {/* Section 3: Co-Curricular & Cultural Activities */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
                     <div className="order-2 lg:order-1 relative group">
-                        <div className="absolute inset-0 bg-brand-brown rounded-3xl transform translate-x-4 -translate-y-4 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-300"></div>
+                        <div className="absolute inset-0 bg-brand-brown transform translate-x-4 -translate-y-4 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-300"></div>
                         <img
                             src={Culture}
                             alt="School Activities"
-                            className="relative rounded-3xl w-full h-100 object-cover shadow-xl border-4 border-white"
+                            className="relative w-full h-100 object-cover shadow-xl border-4 border-white"
                         />
                     </div>
                     <div className="order-1 lg:order-2">
                         <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-brand-brown">
+                            <div className="w-12 h-12 bg-white shadow-md flex items-center justify-center text-brand-brown">
                                 <Palette className="w-6 h-6" />
                             </div>
                             <h3 className="text-3xl font-bold text-brand-black">Co-Curricular & Cultural Activities</h3>
@@ -145,7 +145,7 @@ const AboutDetailedComp = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-8 p-4 bg-white rounded-xl border-r-4 border-brand-brown shadow-sm text-right">
+                        <div className="mt-8 p-4 bg-white border-r-4 border-brand-brown shadow-sm text-right">
                             <p className="font-medium text-brand-black italic text-sm">
                                 "These programs help our students express themselves confidently, appreciate cultural heritage, and build teamwork skills while having fun."
                             </p>
@@ -155,7 +155,7 @@ const AboutDetailedComp = () => {
 
                 {/* Footer Call to Action */}
                 <div className="text-center mt-12 mb-8">
-                    <div className="inline-block bg-brand-brown text-white px-8 py-3 rounded-2xl">
+                    <div className="inline-block bg-brand-brown text-white px-8 py-3">
                         <p className="text-xl font-bold tracking-wide">
                             Join us in building a brighter future for your child.
                         </p>

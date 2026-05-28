@@ -30,7 +30,7 @@ const AboutComp = () => {
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream mb-4">
             <span className="text-sm font-semibold text-brand-brown">
               About Us
             </span>
@@ -39,9 +39,9 @@ const AboutComp = () => {
             C'est Joli Wellspring Academy
           </h2>
           <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="w-12 h-1 bg-brand-red rounded-full" />
-            <div className="w-8 h-1 bg-brand-red/50 rounded-full" />
-            <div className="w-4 h-1 bg-brand-red/30 rounded-full" />
+            <div className="w-12 h-1 bg-brand-red" />
+            <div className="w-8 h-1 bg-brand-red/50" />
+            <div className="w-4 h-1 bg-brand-red/30" />
           </div>
         </div>
 
@@ -64,9 +64,9 @@ const AboutComp = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group flex gap-4 p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
+                  className="group flex gap-4 p-5 bg-white shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
                 >
-                  <div className="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-200">
+                  <div className="w-12 h-12 bg-brand-red flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-200">
                     {feature.icon}
                   </div>
                   <div className="flex-1">
@@ -81,7 +81,7 @@ const AboutComp = () => {
               ))}
             </div>
 
-            <button className="group px-8 py-4 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
+            <button className="group px-8 py-4 bg-brand-red text-white font-semibold hover:bg-brand-red transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2">
               Learn More About Us
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -91,7 +91,7 @@ const AboutComp = () => {
           {/* Right Content - Images Layout */}
           <div className="grid grid-cols-2 gap-4">
             {/* Large Image */}
-            <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg">
+            <div className="col-span-2 overflow-hidden shadow-lg">
               <img
                 src={Learning}
                 alt="Students learning at C'est Joli Wellspring Academy"
@@ -100,7 +100,7 @@ const AboutComp = () => {
             </div>
 
             {/* Small Image 1 */}
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="overflow-hidden shadow-md">
               <img
                 src={School}
                 alt="School environment"
@@ -109,7 +109,7 @@ const AboutComp = () => {
             </div>
 
             {/* Small Image 2 */}
-            <div className="rounded-2xl overflow-hidden shadow-md">
+            <div className="overflow-hidden shadow-md">
               <img
                 src={Activities}
                 alt="School activity"

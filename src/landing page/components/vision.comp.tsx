@@ -9,7 +9,7 @@
 //           </h2>
 
 //           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-//             <div className="p-8 bg-brand-cream rounded-xl border-l-4 border-brand-red">
+//             <div className="p-8 bg-brand-cream border-l-4 border-brand-red">
 //               <h3 className="text-2xl font-bold text-brand-black mb-4">
 //                 Vision
 //               </h3>
@@ -20,7 +20,7 @@
 //               </p>
 //             </div>
 
-//             <div className="p-8 bg-brand-cream rounded-xl border-l-4 border-brand-brown">
+//             <div className="p-8 bg-brand-cream border-l-4 border-brand-brown">
 //               <h3 className="text-2xl font-bold text-brand-black mb-4">
 //                 Mission
 //               </h3>
@@ -39,7 +39,7 @@
 //             </h3>
 //             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 //               <div className="text-center p-6">
-//                 <div className="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+//                 <div className="w-16 h-16 bg-brand-red flex items-center justify-center text-white text-3xl mx-auto mb-4">
 //                   🎓
 //                 </div>
 //                 <h4 className="text-xl font-bold text-brand-black mb-2">
@@ -50,7 +50,7 @@
 //                 </p>
 //               </div>
 //               <div className="text-center p-6">
-//                 <div className="w-16 h-16 bg-brand-brown rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+//                 <div className="w-16 h-16 bg-brand-brown flex items-center justify-center text-white text-3xl mx-auto mb-4">
 //                   🤝
 //                 </div>
 //                 <h4 className="text-xl font-bold text-brand-black mb-2">
@@ -61,7 +61,7 @@
 //                 </p>
 //               </div>
 //               <div className="text-center p-6">
-//                 <div className="w-16 h-16 bg-brand-sky rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+//                 <div className="w-16 h-16 bg-brand-sky flex items-center justify-center text-white text-3xl mx-auto mb-4">
 //                   ✨
 //                 </div>
 //                 <h4 className="text-xl font-bold text-brand-black mb-2">
@@ -116,7 +116,7 @@ const VisionComp = () => {
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream mb-4">
             <span className="text-sm font-semibold text-brand-brown">
               Our Purpose
             </span>
@@ -125,25 +125,25 @@ const VisionComp = () => {
             Our Vision & Mission
           </h2>
           <div className="flex items-center justify-center gap-3">
-            <div className="w-12 h-1 bg-brand-red rounded-full" />
-            <div className="w-8 h-1 bg-brand-red/50 rounded-full" />
-            <div className="w-4 h-1 bg-brand-red/30 rounded-full" />
+            <div className="w-12 h-1 bg-brand-red" />
+            <div className="w-8 h-1 bg-brand-red/50" />
+            <div className="w-4 h-1 bg-brand-red/30" />
           </div>
         </div>
 
         {/* Vision & Mission Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* Vision Card */}
-          <div className="group relative p-8 border-red-500 transition-all duration-300 hover:shadow-xl rounded-xl border-l-4">
+          <div className="group relative p-8 border-red-500 transition-all duration-300 hover:shadow-xl border-l-4">
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-14 h-14 bg-brand-red rounded-xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg">
+              <div className="w-14 h-14 bg-brand-red flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg">
                 <Eye className="w-7 h-7" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-brand-black mb-2">
                   Vision
                 </h3>
-                <div className="w-12 h-1 bg-brand-red rounded-full" />
+                <div className="w-12 h-1 bg-brand-red" />
               </div>
             </div>
             <p className="text-brand-grey text-lg leading-relaxed">
@@ -154,16 +154,16 @@ const VisionComp = () => {
           </div>
 
           {/* Mission Card */}
-          <div className="group relative p-4 border-amber-600 transition-all duration-300 hover:shadow-xl rounded-xl border-l-4">
+          <div className="group relative p-4 border-amber-600 transition-all duration-300 hover:shadow-xl border-l-4">
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-14 h-14 bg-brand-brown rounded-xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg">
+              <div className="w-14 h-14 bg-brand-brown flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg">
                 <Compass className="w-7 h-7" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-brand-black mb-2">
                   Mission
                 </h3>
-                <div className="w-12 h-1 bg-brand-brown rounded-full" />
+                <div className="w-12 h-1 bg-brand-brown" />
               </div>
             </div>
             <p className="text-brand-grey text-lg leading-relaxed">
@@ -177,7 +177,7 @@ const VisionComp = () => {
         {/* Core Values */}
         <div className="relative">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream mb-4">
               <Lightbulb className="w-4 h-4 text-brand-brown" />
               <span className="text-sm font-semibold text-brand-black">
                 What Drives Us
@@ -196,10 +196,10 @@ const VisionComp = () => {
             {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="group text-center bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-brand-grey/20 transition-all duration-300 hover:shadow-xl"
+                className="group text-center bg-white p-8 border-2 border-gray-100 hover:border-brand-grey/20 transition-all duration-300 hover:shadow-xl"
               >
                 <div
-                  className={`w-20 h-20 ${value.color} rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
+                  className={`w-20 h-20 ${value.color} flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
                 >
                   {value.icon}
                 </div>
