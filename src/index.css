@@ -32,3 +32,69 @@ h1, h2, h3, h4, h5, h6 {
 .btn-alert {
   @apply bg-brand-red text-white transition-colors duration-200;
 }
+
+/* ─── Motion keyframes ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-44px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(44px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.82); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.5) translateY(16px); }
+  55%  { opacity: 1; transform: scale(1.07) translateY(-5px); }
+  75%  { transform: scale(0.97) translateY(3px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(220%) skewX(-15deg); }
+}
+@keyframes countIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Animation utility classes ─── */
+.anim-fade-up    { animation: fadeUp      0.65s ease-out both; }
+.anim-fade-left  { animation: fadeInLeft  0.65s ease-out both; }
+.anim-fade-right { animation: fadeInRight 0.65s ease-out both; }
+.anim-scale-in   { animation: scaleIn     0.55s ease-out both; }
+.anim-bounce-in  { animation: bounceIn    0.7s  cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.anim-float      { animation: floatY      4s    ease-in-out infinite; }
+.anim-count-in   { animation: countIn     0.6s  ease-out both; }
+
+/* Hidden until animation triggers */
+.pre-anim { opacity: 0; }
+
+/* Shimmer sweep on hover */
+.shimmer-card { position: relative; overflow: hidden; }
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255,255,255,0.32) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+}
+.shimmer-card:hover::after {
+  animation: shimmer 0.55s ease-out;
+}

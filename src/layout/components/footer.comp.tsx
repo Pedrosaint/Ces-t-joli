@@ -1,11 +1,4 @@
-import {
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  ExternalLink,
-} from "lucide-react";
+import { Phone, MapPin, ExternalLink } from "lucide-react";
 import Logo from "../../assets/images/logo.png";
 
 const FooterComp = () => {
@@ -77,36 +70,6 @@ const FooterComp = () => {
             </ul>
           </div>
 
-          {/* Social Media */}
-          <div>
-            <h4 className="font-bold text-white text-lg mb-6">Follow Us</h4>
-            <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-11 h-11 bg-brand-black flex items-center justify-center text-brand-blue hover:bg-brand-brown hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-11 h-11 bg-brand-black flex items-center justify-center text-sky-400 hover:bg-sky-500 hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-11 h-11 bg-brand-black flex items-center justify-center text-pink-400 hover:bg-pink-500 hover:text-white transform hover:scale-110 hover:-translate-y-1 transition-all duration-200 shadow-lg"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="mt-6 text-xs text-brand-grey">
-              Stay connected for updates and news
-            </p>
-          </div>
         </div>
 
         {/* Divider */}

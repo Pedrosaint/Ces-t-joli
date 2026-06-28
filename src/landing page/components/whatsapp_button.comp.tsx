@@ -16,15 +16,27 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:bg-[#1ebe57] hover:scale-110 transition-all duration-200"
-    >
-      <WhatsAppIcon className="w-7 h-7" />
-    </a>
+    <div className="fixed bottom-6 right-6 z-50">
+      <style>{`
+        @keyframes wa-zoom {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.15); }
+        }
+        .wa-btn { animation: wa-zoom 2s ease-in-out infinite; }
+      `}</style>
+      <div className="relative">
+        <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-50" />
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="wa-btn relative w-14 h-14 bg-[#25D366] rounded-full text-white flex items-center justify-center shadow-lg hover:bg-[#1ebe57] transition-colors duration-200"
+        >
+          <WhatsAppIcon className="w-7 h-7" />
+        </a>
+      </div>
+    </div>
   );
 };
 

@@ -8,6 +8,7 @@ import {
   Award,
   ArrowRight,
 } from "lucide-react";
+import { useScrollReveal, useCountUp } from "../../hooks/useScrollReveal";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -17,7 +18,7 @@ interface Pillar {
   icon: React.ReactNode;
   title: string;
   description: string;
-  accent: string; // border-top color
+  accent: string;
 }
 
 const pillars: Pillar[] = [
@@ -65,30 +66,86 @@ const pillars: Pillar[] = [
   },
 ];
 
-interface Stat {
-  value: string;
-  label: string;
-}
-
-const stats: Stat[] = [
-  { value: "15+", label: "Years of Excellence" },
-  { value: "500+", label: "Graduates & Counting" },
-  { value: "98%", label: "Parent Satisfaction" },
-  { value: "3", label: "Languages Taught" },
+/* Stat items: numeric value + suffix + label */
+const statsData = [
+  { num: 15, suffix: "+", label: "Years of Excellence" },
+  { num: 500, suffix: "+", label: "Graduates & Counting" },
+  { num: 98, suffix: "%", label: "Parent Satisfaction" },
+  { num: 3, suffix: "", label: "Languages Taught" },
 ];
+
+const promiseItems = [
+  {
+    title: "We Teach Respect",
+    desc: "Children learn to honour their parents, teachers, elders, and one another — building a generation rooted in respect.",
+  },
+  {
+    title: "We Build Confidence",
+    desc: "Through presentations, competitions, and leadership roles, your child will find their voice and believe in themselves.",
+  },
+  {
+    title: "We Encourage Hard Work",
+    desc: "Diligence and perseverance are celebrated here. We show students that consistent effort leads to extraordinary results.",
+  },
+  {
+    title: "We Cultivate Integrity",
+    desc: "Honesty and accountability are non-negotiable. We raise children who do the right thing, even when no one is watching.",
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/*  Animated stat counter                                              */
+/* ------------------------------------------------------------------ */
+
+const StatItem = ({
+  num,
+  suffix,
+  label,
+  delay,
+}: {
+  num: number;
+  suffix: string;
+  label: string;
+  delay: number;
+}) => {
+  const [ref, count] = useCountUp(num);
+  return (
+    <div
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className="group anim-count-in"
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <p className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-brand-red transition-colors duration-300">
+        {count}
+        {suffix}
+      </p>
+      <p className="text-sm md:text-base text-gray-400 font-medium tracking-wide uppercase">
+        {label}
+      </p>
+    </div>
+  );
+};
 
 /* ------------------------------------------------------------------ */
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
 const WhyChooseUsComp = () => {
+  const [headerRef, headerVisible] = useScrollReveal();
+  const [cardsRef, cardsVisible] = useScrollReveal();
+  const [promiseLeftRef, promiseLeftVisible] = useScrollReveal();
+  const [promiseRightRef, promiseRightVisible] = useScrollReveal();
+
   return (
     <>
       {/* ── Section 1: Why Parents Choose Us ── */}
       <section className="px-4 md:px-6 lg:px-8 py-20 bg-brand-cream">
         <div className="container mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div
+            ref={headerRef}
+            className={`text-center mb-16 ${headerVisible ? "anim-fade-up" : "pre-anim"}`}
+          >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white mb-4 border border-brand-brown/20">
               <span className="text-sm font-semibold text-brand-brown">
                 Why Parents Trust Us
@@ -110,18 +167,20 @@ const WhyChooseUsComp = () => {
             </div>
           </div>
 
-          {/* Pillar Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Pillar Cards — staggered */}
+          <div
+            ref={cardsRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {pillars.map((pillar, i) => (
               <div
                 key={i}
-                className={`group relative bg-white p-7 border-t-4 ${pillar.accent} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+                className={`group relative bg-white p-7 border-t-4 ${pillar.accent} shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 shimmer-card ${cardsVisible ? "anim-fade-up" : "pre-anim"}`}
+                style={cardsVisible ? { animationDelay: `${i * 110}ms` } : {}}
               >
-                {/* Icon */}
-                <div className="w-14 h-14 bg-brand-cream flex items-center justify-center text-brand-brown mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-brand-cream flex items-center justify-center text-brand-brown mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                   {pillar.icon}
                 </div>
-
                 <h3 className="text-xl font-bold text-brand-black mb-3">
                   {pillar.title}
                 </h3>
@@ -138,15 +197,14 @@ const WhyChooseUsComp = () => {
       <section className="bg-brand-black py-14 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, i) => (
-              <div key={i} className="group">
-                <p className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-brand-red transition-colors duration-300">
-                  {stat.value}
-                </p>
-                <p className="text-sm md:text-base text-gray-400 font-medium tracking-wide uppercase">
-                  {stat.label}
-                </p>
-              </div>
+            {statsData.map((stat, i) => (
+              <StatItem
+                key={i}
+                num={stat.num}
+                suffix={stat.suffix}
+                label={stat.label}
+                delay={i * 120}
+              />
             ))}
           </div>
         </div>
@@ -156,13 +214,15 @@ const WhyChooseUsComp = () => {
       <section className="px-4 md:px-6 lg:px-8 py-20 bg-white">
         <div className="container mx-auto">
           <div className="relative bg-brand-cream overflow-hidden">
-            {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-brown/5 -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-red/5 translate-y-1/2 -translate-x-1/2" />
 
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-12 lg:p-16 items-center">
-              {/* Left — Message */}
-              <div>
+              {/* Left */}
+              <div
+                ref={promiseLeftRef}
+                className={promiseLeftVisible ? "anim-fade-left" : "pre-anim"}
+              >
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white mb-6 border border-brand-brown/20">
                   <Award className="w-4 h-4 text-brand-red" />
                   <span className="text-sm font-semibold text-brand-brown">
@@ -176,9 +236,7 @@ const WhyChooseUsComp = () => {
                 <p className="text-brand-grey text-lg leading-relaxed mb-4">
                   Every child who walks through our doors is welcomed into a
                   community that celebrates their uniqueness, nurtures their
-                  talents, and challenges them to grow. We partner with parents
-                  to build a strong foundation of knowledge, character, and
-                  faith.
+                  talents, and challenges them to grow.
                 </p>
                 <p className="text-brand-grey leading-relaxed mb-8">
                   From their first day in nursery to their graduation, your
@@ -197,29 +255,16 @@ const WhyChooseUsComp = () => {
                 </a>
               </div>
 
-              {/* Right — Values List */}
-              <div className="space-y-5">
-                {[
-                  {
-                    title: "We Teach Respect",
-                    desc: "Children learn to honour their parents, teachers, elders, and one another — building a generation rooted in respect.",
-                  },
-                  {
-                    title: "We Build Confidence",
-                    desc: "Through presentations, competitions, and leadership roles, your child will find their voice and believe in themselves.",
-                  },
-                  {
-                    title: "We Encourage Hard Work",
-                    desc: "Diligence and perseverance are celebrated here. We show students that consistent effort leads to extraordinary results.",
-                  },
-                  {
-                    title: "We Cultivate Integrity",
-                    desc: "Honesty and accountability are non-negotiable. We raise children who do the right thing, even when no one is watching.",
-                  },
-                ].map((item, i) => (
+              {/* Right — staggered promise items */}
+              <div
+                ref={promiseRightRef}
+                className="space-y-5"
+              >
+                {promiseItems.map((item, i) => (
                   <div
                     key={i}
-                    className="flex gap-4 bg-white p-5 shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className={`flex gap-4 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 shimmer-card ${promiseRightVisible ? "anim-fade-right" : "pre-anim"}`}
+                    style={promiseRightVisible ? { animationDelay: `${i * 120}ms` } : {}}
                   >
                     <div className="shrink-0 w-10 h-10 bg-brand-brown/10 flex items-center justify-center text-brand-brown font-bold text-lg">
                       {i + 1}
